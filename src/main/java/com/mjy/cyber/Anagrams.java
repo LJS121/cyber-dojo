@@ -21,7 +21,7 @@ import java.util.List;
 public class Anagrams {
 
     public static void main(String[] args) {
-        String anagrams = "bir";
+        String anagrams = "birlide";
         char[] charArray = anagrams.toCharArray();
 
         List<String> list = new ArrayList<String>();
