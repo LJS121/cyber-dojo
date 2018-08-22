@@ -24,31 +24,39 @@ import java.util.List;
  *
  * @author msh11535
  */
+@Data
 public class HundredDoors {
 
     public static final int NUM = 100;
 
+    private List<Door> doorList;
+
     public static void main(String[] args) {
         //init
-        List<Door> doorList = initDoors();
+        HundredDoors hundredDoors = new HundredDoors();
+        hundredDoors.initDoors();
 
         //visit
-        for (int frequency = 1; frequency <= NUM; frequency++) {
-            visitDoors(doorList, frequency);
-        }
+        hundredDoors.visit();
 
         //print
-        print(doorList);
+        hundredDoors.print();
 
     }
 
-    private static void print(List<Door> doorList) {
-        for (int i = 0; i < doorList.size(); i++) {
-            System.err.println(JSONObject.toJSONString(doorList.get(i)));
+    public void visit() {
+        for (int frequency = 1; frequency <= NUM; frequency++) {
+            visitDoors(this.doorList, frequency);
         }
     }
 
-    public static void visitDoors(List<Door> doorList, int frequency) {
+    public void print() {
+        for (int i = 0; i < this.doorList.size(); i++) {
+            System.err.println(JSONObject.toJSONString(this.doorList.get(i)));
+        }
+    }
+
+    public void visitDoors(List<Door> doorList, int frequency) {
         for (int i = 0; i < doorList.size(); i++) {
             if (doorList.get(i).getIndex() % frequency == 0) {
                 doorList.get(i).visitDoor();
@@ -56,17 +64,17 @@ public class HundredDoors {
         }
     }
 
-    public static List<Door> initDoors() {
-        List<Door> doorList = new ArrayList<Door>(NUM);
+    public List<Door> initDoors() {
+        this.doorList = new ArrayList<Door>(NUM);
         for (int i = 1; i <= NUM; i++) {
-            doorList.add(new Door(i, false));
+            this.doorList.add(new Door(i, false));
         }
-        return doorList;
+        return this.doorList;
     }
 
 
     @Data
-    static class Door {
+    class Door {
         private int index;
         private boolean state;
 
