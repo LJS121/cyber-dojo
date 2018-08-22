@@ -46,9 +46,9 @@ public class BowlingGameTest {
         }
 
         //then
-        Assert.assertEquals(score1, 14);
-        Assert.assertEquals(score2, 9);
-        Assert.assertEquals(score10, 26);
+        Assert.assertEquals(14, score1);
+        Assert.assertEquals(9, score2);
+        Assert.assertEquals(26, score10);
 
         Assert.assertEquals(scoreSum, game.getScoreForFrame(10));
     }
@@ -75,9 +75,9 @@ public class BowlingGameTest {
         }
 
         //then
-        Assert.assertEquals(score1, 14);
-        Assert.assertEquals(score2, 9);
-        Assert.assertEquals(score10, 18);
+        Assert.assertEquals(14, score1);
+        Assert.assertEquals(9, score2);
+        Assert.assertEquals(18, score10);
 
         Assert.assertEquals(scoreSum, game.getScoreForFrame(10));
 
@@ -103,9 +103,9 @@ public class BowlingGameTest {
         }
 
         //then
-        Assert.assertEquals(score1, 14);
-        Assert.assertEquals(score2, 9);
-        Assert.assertEquals(score10, 16);
+        Assert.assertEquals(14, score1);
+        Assert.assertEquals(9, score2);
+        Assert.assertEquals(16, score10);
 
         Assert.assertEquals(scoreSum, game.getScoreForFrame(10));
 
@@ -131,9 +131,9 @@ public class BowlingGameTest {
         }
 
         //then
-        Assert.assertEquals(score1, 14);
-        Assert.assertEquals(score2, 9);
-        Assert.assertEquals(score10, 9);
+        Assert.assertEquals(14, score1);
+        Assert.assertEquals(9, score2);
+        Assert.assertEquals(9, score10);
 
         Assert.assertEquals(scoreSum, game.getScoreForFrame(10));
 
