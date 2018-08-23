@@ -31,7 +31,7 @@ public class Anagrams {
     }
 
     // b i r o
-    private static List<String> combine(List<String> list, char[] arrays, int start, int length) {
+    public static List<String> combine(List<String> list, char[] arrays, int start, int length) {
         if (length == 0) {
             list.add(String.valueOf(arrays));
             return list;
