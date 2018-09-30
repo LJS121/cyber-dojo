@@ -64,5 +64,8 @@ public class MagicSquare {
         list = Lists.newArrayList();
         doubleList.stream().forEach(value -> list.add(Double.valueOf(value * rate).intValue()));
         Collections.sort(list);
+
+        magicList = Lists.newArrayList();
+        magicNumberList = Lists.newArrayList();
     }
 }
